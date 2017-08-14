@@ -46,7 +46,7 @@ h3{
 .player1 {
 height: 110px;
 width: 110px;
-border: 2px solid gray;
+border: 5px solid gray;
 position: absolute;
 top: 150px;
 left:250px;
@@ -69,7 +69,7 @@ background-color: red;
 .player2 {
 height: 110px;
 width: 110px;
-border: 2px solid gray;
+border: 5px solid gray;
 position: absolute;
 top: 150px;
 left: 1020px;

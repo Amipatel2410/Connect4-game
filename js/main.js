@@ -120,9 +120,9 @@ function checkWinner(){
 
 //check diagonal in opposite direction
 
-for(col=0 ;col<width-3 ; col++)
+for(col=0; col<width-3; col++)
 {
-  for(row = 3; row<height ; row++)
+  for(row = 3; row<height; row++)
   {
     color = box[row][col];
     if(color)
@@ -146,48 +146,34 @@ function winnerCheck ()
 
   if(color === red)
   {
-
-
-    $("#winner").html('<h3>' + "Player Red won !!!" + '</h3>');
+    $("#winner").html('<h3>' + "Player Red won !!! Game Over" + '</h3>');
     resetgame();
   }
 
   else if(color === blue)
   {
-    $("#winner").html('<h3>' + "Player Blue won !!!" + '</h3>');
+    $("#winner").html('<h3>' + "Player Blue won !!! Game Over" + '</h3>');
     resetgame();
   }
-
-
- /* else{
-
-    $("td").each(function(){
-
-      if(color != empty)
-      {
-        console.log("tie!!!!");
-      }
-        });
-    }*/
-
-
 }
-/*function checkDraw(color){
-  if((color !== empty) )
-  {
+
+
+function checkDraw(color)
+{
   var arr = [];
-  for(col=0 ;col<width ; col++)
+  var empty ="rgb(0 ,0, 0, 0)";
+  var empty2 = "rgba(0, 0, 0, 0)";
+  var empty3 = "rgb(255, 255, 255)";
+  for(row=0 ; row<height ; row++)
   {
-  for(row = 0; row<height ; row++)
+  for(col = 0; col<width ; col++)
   {
     color = box[row][col];
-    var empty ="rgb(0 ,0, 0)";
-    var empty2 = "rgba(0, 0, 0, 0)";
-    var empty3 = "rgb(255, 255, 255)";
+
     if(color != empty && color != empty2 && color != empty3)
     {
       arr.push(color)
-      console.log(arr + "hsdbfh" + arr.length)
+      //console.log(arr + "hsdbfh" + arr.length)
       var holder;
       if(arr.length == 42)
       {
@@ -200,13 +186,12 @@ function winnerCheck ()
       }
       }
       }
-
     }
   }
   }
-  }
+}
 
-}*/
+
 
 
 
